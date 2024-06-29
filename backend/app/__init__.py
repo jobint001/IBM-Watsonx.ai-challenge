@@ -9,6 +9,7 @@ def create_app():
     load_dotenv()
     
     app.config['API_KEY'] = os.getenv('API_KEY')
+    app.config['PROJECT_ID'] = os.getenv('PROJECT_ID')
 
     # Register Blueprints
     from app.routes import main as main_blueprint
