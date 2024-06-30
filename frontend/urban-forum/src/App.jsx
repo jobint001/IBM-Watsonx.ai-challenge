@@ -5,6 +5,7 @@ import HomePage from './pages/HomePage';
 import Signup from './components/Signup';
 import LoginPage from './components/Login';
 import { MenuProvider } from './context/MenuContext';
+import Dashboard from './pages/Dashboard';
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<LoginPage />} />
+          <Route path="/dashboard" element={<Dashboard />} />
         </Routes>
       </Router>
     </MenuProvider>
