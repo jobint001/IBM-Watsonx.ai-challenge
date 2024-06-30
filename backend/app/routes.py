@@ -13,9 +13,9 @@ def index():
 def analyze_feedback():
     data = request.get_json()
     
-    #access_token = get_access_token()
-    access_token= os.getenv('ACCESS_TOKEN')
+    access_token = get_access_token()
+    #access_token= os.getenv('ACCESS_TOKEN')
 
-    analysis = analyze_text("this product is dope and i am using it for like a month and its not working anymore", access_token)
-
+    analysis = analyze_text("The new public park is fantastic! It's clean and well-maintained, and my kids love the playground. I appreciate the frequent public transport, but the buses are often overcrowded and late.The city app is very helpful for finding information, but it crashes frequently. Waste collection has improved significantly, but there are still areas with irregular schedules. Digital services are good, but internet connectivity in some areas is poor.", access_token)
+    print(analysis)
     return jsonify(analysis)

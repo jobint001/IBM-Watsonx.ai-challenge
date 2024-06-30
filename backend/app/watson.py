@@ -15,16 +15,14 @@ model_id = "ibm/granite-13b-chat-v2"
 
 summarize_instruction = """
 
-You are a retail expert. You will be given a list of product reviews. Your task is to generate a  summary, only from given product reviews from an ecommerce site to give feedback to another customer. When generating responses, prioritize correctness, i.e., ensure that your response is correct given the context and user query, and that it is grounded in the context.
+You are Granite Chat, an AI language model developed by IBM. You are a cautious assistant. Your task is to create a brief, accurate summary of citizen feedback on public infrastructure projects and services to assist city planners in making informed decisions. Ensure the summary captures the key themes and sentiments expressed in the feedback and organize the output into sections for features citizens liked, features citizens did not like, and the best infrastructure project to be considered next based on the feedback. Format the summary exactly as shown in the examples.
 
 [Document]
-{reviews}
+{feedback}
 [End]
 
 
 <|assistant|>
-Features customers liked about the product: 1. The machines are beautiful, with a color option of Champagne. 2. The washer does a fantastic job and has many options for washing cycles. 3. The washer and dryer combination is esthetically pleasing. 4. The features of the dryer are great benefits, reliable, and have useful functions like steam. 5. The delivery process was easy, and the machine was easy to install. 6. The capacity of the machine is pretty big. 7. The steam function is a great feature. 8. The washer has the option to choose your wash time and pick how many spin cycles you need. 9. The new model seems even more efficient than the old one. 10. The new model has new features that the customer enjoys. Features customers did not like about the product or had issues with: 1. No specific issues or complaints were mentioned about the product.
-
 """
 
 class Prompt:
@@ -58,15 +56,14 @@ def get_access_token():
     api_key ,
     url = "https://iam.cloud.ibm.com/identity/token"
 ).get_token()
-    print(access_token)
-
+    
     return access_token
 
-def analyze_text(text, access_token):
+def  analyze_text(text, access_token):
     project_id = current_app.config['PROJECT_ID']
     prompt = Prompt(access_token, project_id)
     results = []
-    prompt_instruction = summarize_instruction.format(reviews=text)
+    prompt_instruction = summarize_instruction.format(feedback=text)
     results.append(prompt.generate(prompt_instruction, model_id, parameters).replace("\n",""))
    
     
