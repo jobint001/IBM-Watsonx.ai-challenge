@@ -6,6 +6,7 @@ import Signup from './components/Signup';
 import LoginPage from './components/Login';
 import { MenuProvider } from './context/MenuContext';
 import Dashboard from './pages/Dashboard';
+import SummaryPage from './pages/SummaryPage';  // Import the SummaryPage component
 
 function App() {
   return (
@@ -17,6 +18,7 @@ function App() {
           <Route path="/signup" element={<Signup />} />
           <Route path="/login" element={<LoginPage />} />
           <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/summary" element={<SummaryPage/>} />
         </Routes>
       </Router>
     </MenuProvider>

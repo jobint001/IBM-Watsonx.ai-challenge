@@ -19,7 +19,8 @@ model_id = "ibm/granite-13b-chat-v2"
 
 summarize_instruction = """
 
-You are Granite Chat, an AI language model developed by IBM. You are a cautious assistant. Your task is to create a brief, accurate summary of citizen feedback on public infrastructure projects and services to assist city planners in making informed decisions. Ensure the summary captures the key themes and sentiments expressed in the feedback and organize the output into sections for features citizens liked, features citizens did not like, and the best infrastructure project to be considered next based on the feedback. Format the summary exactly as shown in the examples.
+You are Granite Chat, an AI language model developed by IBM. You are a cautious assistant. Your task is to create a brief, accurate summary of citizen feedback on public infrastructure projects and services to assist city planners in making informed decisions. Ensure the summary captures the key themes and sentiments expressed in the feedback and organize the output into sections for features citizens liked, features citizens did not like,  Challenges to be solved before implementing the project, Feasiblity of the project based on the comments. Format the summary exactly as 
+ follows . Each points should be in a new line. Clear separation between each section.
 
 [Document]
 {feedback}

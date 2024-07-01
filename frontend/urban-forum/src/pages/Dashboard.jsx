@@ -28,7 +28,7 @@ const comments = [
 function Dashboard() {
     return (
         <div className="min-h-screen bg-gray-100 flex flex-col items-center">
-            <h1 className="text-2xl font-bold text-center my-6">Urban Planning Ideas Dashboard</h1>
+            <h1 className="text-2xl text-black font-bold text-center my-6">Urban Planning Ideas Dashboard</h1>
             <div className="w-full md:w-2/3">
                 {comments.map(comment => <Comment key={comment.id} comment={comment} />)}
             </div>

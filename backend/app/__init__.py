@@ -1,10 +1,14 @@
 from flask import Flask
 from dotenv import load_dotenv
 import os
+from flask_cors import CORS, cross_origin
+
+
+
 
 def create_app():
     app = Flask(__name__)
-    
+    CORS(app, support_credentials=True)
     # Load configuration
     load_dotenv()
     
