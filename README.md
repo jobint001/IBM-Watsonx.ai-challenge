@@ -1,4 +1,7 @@
 # IBM-Watsonx.ai-challenge
+
+## Introduction
+
 Leverages Watsonx.ai, specifically the IBM Granite model, to analyze and summarize customer reviews, providing city planners and administrators with actionable insights.
 
 ## Prerequisites
@@ -88,10 +91,14 @@ Leverages Watsonx.ai, specifically the IBM Granite model, to analyze and summari
     npm run dev
     ```
 
+
 ## Usage
 
-- Access the application through the frontend server (default is `http://localhost:5173/`).
-- Use the various features of the application to interact with Chennai's public transportation system.
+1. **Prepare your `dataset.csv` file** with the necessary data.
+
+2. **The Flask backend processes the `dataset.csv` file** and returns a summary.
+
+3. **The frontend displays the summary** returned by the backend.
 
 ## Troubleshooting
 
