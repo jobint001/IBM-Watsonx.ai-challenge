@@ -5,11 +5,15 @@ from ibm_cloud_sdk_core.authenticators import IAMAuthenticator, BearerTokenAuthe
 import os, getpass
 
 parameters = {
-    "decoding_method": "greedy",""
-    "max_new_tokens": 300,
+    "decoding_method": "greedy",
+    "top_p": 0.90,
+    "top_k": 40,
+    "temperature": 0.7,
+    "max_new_tokens": 350,
     "min_new_tokens": 50,
-    "repetition_penalty": 1
+    "repetition_penalty": 1.01
 }
+
 
 model_id = "ibm/granite-13b-chat-v2"
 
