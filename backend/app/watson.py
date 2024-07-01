@@ -37,7 +37,7 @@ class Prompt:
             "Content-Type": "application/json",
             "Accept": "application/json"
         }
-        data = {
+        data = { 
             "model_id": model_id,
             "input": input,
             "parameters": parameters,
@@ -66,7 +66,4 @@ def  analyze_text(text, access_token):
     prompt_instruction = summarize_instruction.format(feedback=text)
     results.append(prompt.generate(prompt_instruction, model_id, parameters).replace("\n",""))
    
-    
-    
-    
     return results
