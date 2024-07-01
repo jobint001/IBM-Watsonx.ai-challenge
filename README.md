@@ -48,8 +48,8 @@ Leverages Watsonx.ai, specifically the IBM Granite model, to analyze and summari
 
 - Create a `.env` file in the `backend` directory with the necessary environment variables. For example:
     ```
-    WATSON_API_KEY=your_watson_api_key
-    WATSON_URL=your_watson_url
+    API_KEY=your_watsonx_api_key
+    PROJECT_ID=your_project_id
     ```
 
 ### Frontend
