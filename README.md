@@ -7,6 +7,7 @@ Leverages Watsonx.ai, specifically the IBM Granite model, to analyze and summari
 - Node.js 14.x or higher
 - npm 6.x or higher
 - IBM Watsonx.ai credentials
+  
 
 ## Installation
 
@@ -60,22 +61,26 @@ Leverages Watsonx.ai, specifically the IBM Granite model, to analyze and summari
 
 ### Backend
 
-1. **Activate the virtual environment (if not already activated):**
+1. **Navigate to the backend from root directory:**
+    ```bash
+    cd backend
+    ```
+2. **Activate the virtual environment (if not already activated):**
     ```bash
     source ibm/Scripts/activate (Windows)
     source ibm/bin/activate (MacOS/Linux)
     ```
 
-2. **Run the backend server:**
+3. **Run the backend server:**
     ```bash
     python run.py
     ```
 
 ### Frontend
 
-1. **Navigate to the frontend directory:**
+1. **Navigate to the frontend from root directory:**
     ```bash
-    cd ../frontend/urban-forum
+    cd  frontend/urban-forum
     ```
 
 2. **Run the frontend development server:**
@@ -85,7 +90,7 @@ Leverages Watsonx.ai, specifically the IBM Granite model, to analyze and summari
 
 ## Usage
 
-- Access the application through the frontend server (default is `http://localhost:3000`).
+- Access the application through the frontend server (default is `http://localhost:5173/`).
 - Use the various features of the application to interact with Chennai's public transportation system.
 
 ## Troubleshooting
